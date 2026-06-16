@@ -1,0 +1,57 @@
+name: lab14
+
+services:
+
+  nginx:
+    image: nginx:1.26
+    container_name: nginx
+    depends_on:
+      - php
+    networks:
+      - frontend
+      - backend
+
+  php:
+    image: php:8.3-fpm
+    container_name: php
+    expose:
+      - "9000"
+    networks:
+      - backend
+
+  mysql:
+    image: mysql:8.4
+    container_name: mysql
+    secrets:
+      - db_password
+      - db_root_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    expose:
+      - "3306"
+    networks:
+      - backend
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.2
+    container_name: phpmyadmin
+    depends_on:
+      - mysql
+    networks:
+      - frontend
+      - backend
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt
+  db_root_password:
+    file: ./secrets/db_root_password.txt
+
+volumes:
+  mysql_data:
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
