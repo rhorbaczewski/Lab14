@@ -127,7 +127,7 @@ Zastosowanie nazewnictwa zgodnego ze standardową konwencją nazewnictwa dla mec
 ```bash
 (base) roberthorbaczewski@MacBook-Air-M2-Robert Lab14 % docker compose ls
 NAME                STATUS              CONFIG FILES
-lab14               running(4)          /Users/roberthorbaczewski/Desktop/Studia/Semestr VI/Programowanie Aplikacji w Chmurce/Lab14/docker-compose.yml,/Users/roberthorbaczewski/Desktop/Studia/Semestr VI/Programowanie Aplikacji w Chmurce/Lab14/docker-compose.override.yml
+lab14               running(4)          /Users/roberthorbaczewski/Desktop/Studia/Semestr VI/Programowanie Aplikacji w Chmurze/Lab14/docker-compose.yml,/Users/roberthorbaczewski/Desktop/Studia/Semestr VI/Programowanie Aplikacji w Chmurze/Lab14/docker-compose.override.yml
 ```
 
 ```bash
@@ -140,12 +140,12 @@ eb73194f7084   php:8.3-fpm                        "docker-php-entrypoi…"   36 
 ```
 
 ### Strona PHP:
-![Strona PHP](screenshots/zrzut1)
+![Strona PHP](screenshots/zrzut1.png)
 (Plik index.php niemodyfikowany względem poprzedniego laboratorium)
 
 ### phpMyAdmin:
-![phpMyAdmin1](screenshots/zrzut2)
+![phpMyAdmin1](screenshots/zrzut2.png)
 
-![phpMyAdmin2](screenshots/zrzut3)
+![phpMyAdmin2](screenshots/zrzut3.png)
 
-![phpMyAdmin3](screenshots/zrzut4)
+![phpMyAdmin3](screenshots/zrzut4.png)
